@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GameActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/gameToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Tic Tac Toe"
+        app:titleTextColor="@color/white"
+        android:background="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/gameToolbar"
+        android:background="#1A6671"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:columnCount="3">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn1"
+                android:onClick="perform"
+                android:layout_marginBottom="2dp"
+                android:background="@color/btnBackgroundColor"
+                android:textSize="40sp"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn2"
+                android:onClick="perform"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:background="@color/btnBackgroundColor"
+                android:textSize="40sp"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn3"
+                android:onClick="perform"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:background="@color/btnBackgroundColor"
+                android:textSize="40sp"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn4"
+                android:onClick="perform"
+                android:layout_marginBottom="2dp"
+                android:background="@color/btnBackgroundColor"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn5"
+                android:onClick="perform"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:background="@color/btnBackgroundColor"
+                android:textSize="40sp"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn6"
+                android:onClick="perform"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:background="@color/btnBackgroundColor"
+                android:textSize="40sp"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn7"
+                android:onClick="perform"
+                android:background="@color/btnBackgroundColor"
+                android:textSize="40sp"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn8"
+                android:onClick="perform"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:background="@color/btnBackgroundColor"
+                android:textSize="40sp"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn9"
+                android:onClick="perform"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:background="@color/btnBackgroundColor"
+                android:textSize="40sp"
+                android:textStyle="bold"/>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:background="#DEF5E5"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/black"
+        android:text="RESET"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtPlayerOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/gameToolbar"
+        android:background="@color/txtColorForX"
+        android:text="Player One"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtCountPlayerOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="1"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:layout_toRightOf="@+id/txtPlayerOne"
+        android:layout_toEndOf="@+id/txtPlayerOne"
+        android:layout_below="@+id/gameToolbar"
+        android:layout_marginTop="50dp"
+        android:background="#DEF5E5"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtPlayerTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_alignRight="@+id/gameToolbar"
+        android:layout_below="@+id/gameToolbar"
+        android:background="@color/txtColorForO"
+        android:text="Player Two"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtCountPlayerTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="1"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:layout_toLeftOf="@+id/txtPlayerTwo"
+        android:layout_toStartOf="@+id/txtPlayerTwo"
+        android:layout_below="@+id/gameToolbar"
+        android:layout_marginTop="50dp"
+        android:background="#DEF5E5"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>
